@@ -1,5 +1,6 @@
 package kr.co.clozet.closet.domains;
 
+import kr.co.clozet.user.domains.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -32,12 +33,14 @@ public class Closet {
     @Id
     @Column(name = "closet_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long closetId;
-    @Column private String userId;
     @Column private String clothesClassification;
 
     @OneToMany(mappedBy = "closet")
     List<Clothes> clothes = new ArrayList<>();
 
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
 }

@@ -35,7 +35,6 @@ public class Board {
     @Id
     @Column(name = "board_id")
     @GeneratedValue private long boardId;
-    @Column private String userId;
     @Column private String open;
     @Column private String picture;
     @Column private String comment;

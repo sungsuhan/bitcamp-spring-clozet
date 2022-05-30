@@ -2,6 +2,7 @@ package kr.co.clozet.user.domains;
 
 import com.sun.istack.NotNull;
 import kr.co.clozet.board.domains.Article;
+import kr.co.clozet.closet.domains.Closet;
 import lombok.*;
 
 import javax.persistence.*;
@@ -44,6 +45,9 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     List<Article> articles = new ArrayList<>();
+
+    @OneToOne(mappedBy = "user")
+    private Closet closet;
 
     @ElementCollection(fetch = FetchType.EAGER)
     public List<Role> roles;
