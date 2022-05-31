@@ -1,5 +1,9 @@
 package kr.co.clozet.closet.services;
 
+import kr.co.clozet.closet.repositories.ClosetRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
 /**
  * packageName:kr.co.clozet.closet.services
  * fileName        :ClosetServiceImpl.java
@@ -11,5 +15,9 @@ package kr.co.clozet.closet.services;
  * =============================================
  * 2022-05-29           sungsuhan      최초 생성
  **/
-public class ClosetServiceImpl {
+@Service
+@RequiredArgsConstructor
+public class ClosetServiceImpl implements ClosetService {
+
+    private final ClosetRepository repository;
 }

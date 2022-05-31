@@ -1,5 +1,9 @@
 package kr.co.clozet.closet.repositories;
 
+import kr.co.clozet.closet.domains.Clothes;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  * packageName:kr.co.clozet.closet.repositories
  * fileName        :ClothesRepository.java
@@ -11,5 +15,11 @@ package kr.co.clozet.closet.repositories;
  * =============================================
  * 2022-05-29           sungsuhan      최초 생성
  **/
-public interface ClothesRepository {
+interface ClothesCustomRepository{
+
+}
+
+
+@Repository
+public interface ClothesRepository extends JpaRepository<Clothes, Long> {
 }
