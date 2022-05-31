@@ -1,5 +1,6 @@
 package kr.co.clozet.closet.services;
 
+import kr.co.clozet.closet.domains.Closet;
 import kr.co.clozet.closet.repositories.ClosetRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,4 +21,10 @@ import org.springframework.stereotype.Service;
 public class ClosetServiceImpl implements ClosetService {
 
     private final ClosetRepository repository;
+
+    @Override
+    public String delete(Closet closet) {
+        repository.delete(closet);
+        return "";
+    }
 }
