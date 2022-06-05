@@ -1,6 +1,6 @@
-package kr.co.clozet.closet.controllers;
+package kr.co.clozet.clothes.controllers;
 
-import kr.co.clozet.closet.services.ClothesService;
+import kr.co.clozet.clothes.services.ClothesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

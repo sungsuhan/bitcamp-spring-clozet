@@ -1,6 +1,7 @@
-package kr.co.clozet.closet.domains;
+package kr.co.clozet.clothes.domains;
 
-import kr.co.clozet.board.domains.Board;
+import kr.co.clozet.closet.domains.Closet;
+import kr.co.clozet.user.domains.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -8,6 +9,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * packageName:kr.co.clozet.closet.domains
@@ -32,18 +35,26 @@ public class Clothes {
     @Id
     @Column(name = "clothes_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long clothesId;
-    @Column private String date;
-    @Column private String season;
-    @Column private String color;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "closet_id")
     private Closet closet;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "board_id")
-    private Board board;
+    @JoinColumn(name = "user_id")
+    private User user;
 
+    @OneToOne(mappedBy = "clothes")
+    private Color color;
+
+    @OneToOne(mappedBy = "clothes")
+    private Weather weather;
+
+    @OneToOne(mappedBy = "clothes")
+    private Style style;
+
+    @OneToOne(mappedBy = "clothes")
+    private Event event;
 
 
 

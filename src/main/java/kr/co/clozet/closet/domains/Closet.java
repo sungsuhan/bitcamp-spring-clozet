@@ -1,5 +1,7 @@
 package kr.co.clozet.closet.domains;
 
+import kr.co.clozet.board.domains.Board;
+import kr.co.clozet.clothes.domains.Clothes;
 import kr.co.clozet.user.domains.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,9 +40,9 @@ public class Closet {
     @OneToMany(mappedBy = "closet")
     List<Clothes> clothes = new ArrayList<>();
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "board_id")
+    private Board board;
 
 
 }

@@ -1,7 +1,8 @@
 package kr.co.clozet.board.domains;
 
 import com.sun.istack.NotNull;
-import kr.co.clozet.closet.domains.Clothes;
+import kr.co.clozet.closet.domains.Closet;
+import kr.co.clozet.clothes.domains.Clothes;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -52,7 +53,7 @@ public class Board {
     List<Article> articles = new ArrayList<>();
 
     @OneToMany(mappedBy = "board")
-    List<Clothes> clothes = new ArrayList<>();
+    List<Closet> closets = new ArrayList<>();
 
 
 

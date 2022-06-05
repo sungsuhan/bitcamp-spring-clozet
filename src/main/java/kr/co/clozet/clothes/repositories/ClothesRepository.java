@@ -1,6 +1,6 @@
-package kr.co.clozet.closet.repositories;
+package kr.co.clozet.clothes.repositories;
 
-import kr.co.clozet.closet.domains.Clothes;
+import kr.co.clozet.clothes.domains.Clothes;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

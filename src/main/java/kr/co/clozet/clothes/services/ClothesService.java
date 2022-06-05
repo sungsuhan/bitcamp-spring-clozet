@@ -1,4 +1,4 @@
-package kr.co.clozet.closet.services;
+package kr.co.clozet.clothes.services;
 
 /**
  * packageName:kr.co.clozet.closet.services

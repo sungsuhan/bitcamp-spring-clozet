@@ -1,6 +1,7 @@
-package kr.co.clozet.closet.services;
+package kr.co.clozet.clothes.services;
 
-import kr.co.clozet.closet.repositories.ClothesRepository;
+import kr.co.clozet.clothes.repositories.ClothesRepository;
+import kr.co.clozet.clothes.services.ClothesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ import org.springframework.stereotype.Service;
  **/
 @Service
 @RequiredArgsConstructor
-public class ClothesServiceImpl implements ClothesService{
+public class ClothesServiceImpl implements ClothesService {
 
     private final ClothesRepository repository;
 }
