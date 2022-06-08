@@ -36,6 +36,11 @@ dependencies {
 	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.0'
+	//json -> object
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+	//json
+	implementation group: 'org.json', name: 'json', version: '20220320'
 }
 
 tasks.named('test') {
