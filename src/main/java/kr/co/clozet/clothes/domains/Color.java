@@ -32,6 +32,11 @@ public class Color {
     @GeneratedValue(strategy = GenerationType.IDENTITY) private long colorId;
     @Column private String black;
     @Column private String white;
+    @Column private String pink;
+    @Column private String green;
+    @Column private String grey;
+    @Column private String orange;
+    @Column private String blue;
 
     @OneToOne
     @JoinColumn(name = "clothes_id")

@@ -22,7 +22,7 @@ import java.util.Map;
 public class JsonFileToObject {
     public static void main(String[] args) throws Exception {
 
-        URL path = JsonFileToObject.class.getResource("/user.json");
+        URL path = JsonFileToObject.class.getResource("/clothes/user.json");
 
         File jsonFile = new File(path.getFile());
 

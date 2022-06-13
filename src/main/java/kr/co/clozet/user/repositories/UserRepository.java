@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -21,18 +22,21 @@ import java.util.Optional;
  **/
 
 interface UserCustomRepository{
-    // 000. 사용자의 비밀번호와 이메일을 수정하시오
-    @Modifying
-    @Query(value = "")
-    void update(User user);
+    // 000. 사용자의 비밀번호를 수정하시오
+    @Modifying(clearAutomatically = true)
+    @Query(value = "update user u set u.password where u.userId",
+            nativeQuery = true)
+    List<User> update();
 
-    @Query(value = "")
-    String login(User user);
+
 }
 
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface UserRepository extends JpaRepository<User, Long>, UserCustomRepository {
     Optional<User> findByUsername(String username);
 
+    @Override
+    List<User> update();
 }
+
