@@ -47,6 +47,7 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/users/join").permitAll()
                 .antMatchers("/users/login").permitAll()
+                .antMatchers("/api/weather").permitAll()
                 .anyRequest().authenticated();
         http.exceptionHandling().accessDeniedPage("/users/login");
     }

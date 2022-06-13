@@ -35,12 +35,12 @@ public class WeatherApiController {
        String url = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst"
                +"?serviceKey=Pr2ZKDyds1YOAJ4t%2BYGLo%2BqrDFtXciiwz4j2zSE7fLLg5eYc5DbNNC2TXgR7TzZHyO2LSPwMN67NdPwwYUVQUw%3D%3D"
                +"&dataType=JSON"
-               +"&numOfRows=10"
+               +"&numOfRows=100"
                +"&pageNo=1"
-               +"&base_date=20220103"
-               +"&base_time=0600"
-               +"&nx=60"
-               +"&ny=127";
+               +"&base_date=20220613"
+               +"&base_time=0800"
+               +"&nx=61"
+               +"&ny=125";
         HashMap<String, Object> resultMap = getDataFromJson(url, "UTF-8", "get", "");
 
         System.out.println("# RESULT :" + resultMap);
